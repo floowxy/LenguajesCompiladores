@@ -1,0 +1,18 @@
+constante LIMITE : entero32 = 10;
+
+sea mutable mensaje : cadena = "Hola Mundo";
+sea mutable flag : booleano = verdadero;
+sea decimal : flotante32 = 3.14;
+sea letra : caracter = 'x';
+
+fun sumar(a : entero32, b : entero32) : entero32 {
+    retornar a + b;
+}
+
+mainfun() {
+    sea mutable contador : entero32 = 0;
+    mientras (contador < LIMITE) {
+        mostrar(contador);
+        contador++;
+    }
+}

@@ -1,0 +1,9 @@
+// Este archivo contiene tokens con errores lexicos deliberados
+sea identificador_invalido_ = 10;
+sea variable__doble = 20;
+sea numero_mal = 12.34.56;
+sea cadena_sin_cerrar = "texto sin comilla final
+sea caracter_invalido = 'abc';
+sea bitwise_invalido = a & b;
+sea pipe_invalido = a | b;
+sea simbolo_raro = @;
