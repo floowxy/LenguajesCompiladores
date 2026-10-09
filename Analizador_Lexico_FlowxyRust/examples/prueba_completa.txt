@@ -1,0 +1,67 @@
+constante MAYORIA : entero32 = 18;
+sea mutable total : entero32 = 0;
+sea mutable notas : [entero32; 3] = [10, 15, 20];
+
+clase Persona {
+    sea nombre : cadena;
+    sea edad : entero32;
+}
+
+implementa Persona {
+    fun obtenerEdad() : entero32 {
+        retornar este.edad;
+    }
+
+    fun mutable cumplirAnios() {
+        este.edad++;
+    }
+}
+
+fun duplicar(numero : entero32) : entero32 {
+    retornar numero * 2;
+}
+
+fun saludar(nombre : cadena) {
+    mostrar("Hola " + nombre);
+    retornar;
+}
+
+mainfun() {
+    sea mutable persona : Persona;
+    persona = Persona { nombre: "Diego", edad: 20 };
+
+    sea mutable edadIngresada : entero32;
+    leer(edadIngresada);
+    persona.edad = edadIngresada;
+    persona.cumplirAnios();
+
+    sea edadActual : entero32 = persona.obtenerEdad();
+    sea activo : booleano = verdadero;
+    sea inicial : caracter = 'D';
+    sea temperatura : flotante32 = -5.5;
+    sea cantidad : natural32 = 3;
+    sea resultado : entero32 = duplicar(edadActual);
+
+    notas = [12, 16, 18];
+    notas[0] = (notas[1] + notas[2]) / 2;
+
+    si (edadActual >= MAYORIA && activo) {
+        saludar(persona.nombre);
+    } sino {
+        mostrar("Registro pendiente");
+    }
+
+    sea mutable contador : entero32 = 0;
+    mientras (contador < 3) {
+        mostrar(notas[contador]);
+        contador++;
+    }
+
+    para (sea mutable i : entero32 = 0; i < 3; i++) {
+        total += notas[i];
+    }
+
+    // Mostrar el resultado acumulado.
+    mostrar(total);
+    mostrar(resultado);
+}
