@@ -1,0 +1,14 @@
+# Binarios y compilación
+build/
+bin/
+bin_legacy/
+*.o
+*.exe
+lexer
+
+# Archivos de sistema y editores
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
