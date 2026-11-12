@@ -1,16 +1,16 @@
 #include "parser.hpp"
+
+#include <iomanip>
+#include <iostream>
 #include <map>
 #include <set>
+#include <sstream>
 #include <stdexcept>
 #include <string>
 #include <utility>
 #include <vector>
 
 // Estructuras internas del analizador sintactico.
-#include <map>
-#include <set>
-#include <string>
-#include <vector>
 
 struct Production {
   int numero;
@@ -406,12 +406,6 @@ const std::set<std::string> &Grammar::siguientes(const std::string &nt) const {
 }
 
 // Algoritmo ADP: pila + TAS calculada desde las producciones anteriores.
-
-#include <algorithm>
-#include <iomanip>
-#include <iostream>
-#include <sstream>
-#include <unordered_map>
 
 Parser::Parser() = default;
 
