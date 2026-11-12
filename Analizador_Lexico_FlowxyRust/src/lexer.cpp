@@ -86,7 +86,10 @@ Token Lexer::reconocerNumero(const string &entrada, int &i) {
     }
   }
 
-  return {2000, "Literal numerico", lexema};
+  if (lexema.find('.') != string::npos) {
+    return {2020, "Literal decimal", lexema};
+  }
+  return {2010, "Literal entero", lexema};
 }
 
 Token Lexer::reconocerCadena(const string &entrada, int &i) {

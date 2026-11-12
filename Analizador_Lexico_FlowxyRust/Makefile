@@ -1,3 +1,4 @@
+
 # Compiler and Flags
 CXX ?= g++
 CXXFLAGS ?= -std=c++17 -Wall -Wextra -pedantic -Iinclude
@@ -13,7 +14,7 @@ SRCS = $(wildcard $(SRC_DIR)/*.cpp)
 OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(BUILD_DIR)/%.o, $(SRCS))
 
 # Target executable
-TARGET = $(BIN_DIR)/lexer
+TARGET = $(BIN_DIR)/flowxyrust
 
 .PHONY: all clean run test help
 
