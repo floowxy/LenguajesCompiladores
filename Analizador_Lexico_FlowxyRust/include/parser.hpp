@@ -5,17 +5,19 @@
 #include <vector>
 
 struct ResultadoSintactico {
-    bool aceptado = false;
-    int erroresLexicos = 0;
-    int erroresSintacticos = 0;
-    std::vector<std::string> mensajes;
+  bool aceptado = false;
+  int erroresLexicos = 0;
+  int erroresSintacticos = 0;
+  std::vector<std::string> mensajes;
 };
 
 class Parser {
 public:
-    Parser();
-    ResultadoSintactico analizar(const std::vector<Token>& tokens, bool mostrarTraza = false) const;
+  Parser();
+  ResultadoSintactico analizar(const std::vector<Token> &tokens,
+                               bool mostrarTraza = false) const;
+
 private:
-    static std::string terminal(const Token& token);
+  static std::string terminal(const Token &token);
 };
 #endif
